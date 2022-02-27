@@ -13,7 +13,7 @@ repositories {
 dependencies {
     implementation 'io.qameta.allure:allure-cucumber7-jvm:2.17.2'
     implementation 'io.appium:java-client:7.6.0'
-    implementation 'io.github.prashant-ramcharan:courgette-jvm:6.2.0'
+    implementation 'io.github.prashant-ramcharan:courgette-jvm:6.4.0'
 }
 
 tasks.withType(Test) {
