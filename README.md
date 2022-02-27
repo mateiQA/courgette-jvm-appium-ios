@@ -1,26 +1,28 @@
 # Courgette-JVM with Appium (iOS)
-
 An example project showing how to use Courgette-JVM with Appium to test iOS native applications.
 
+Extras:
+* Added methods for most common element interaction methods inside the BasePage class (clickElement, waitElement etc)
+* Implemented Page Object design pattern classes that contains the page objects and methods (all future page classes need to extend BasePage)
+* Implemented @FindBy annotations for cleaner code and Page Factory initializers
+* Refactored all Appium Driver and Appium service code to reside inside DriverManager class (just call DriverManager.getDriver() to get the driver object)
+* Simplified step definitions code using "implements En" and declaring the steps inside the constructor
+* Modified @After method to include a screenshot when tests fail
+* Added the Allure report plugin
 ## System Requirements
 
-* Java
+* Java 8
 * MacOS
 * [Appium](https://appium.io/docs/en/about-appium/getting-started/?lang=en)
-* [XCode](https://developer.apple.com/xcode/) with iPhone 8 iPhone 12 and iPhone 13 simulators
+* [XCode](https://developer.apple.com/xcode/) with iPhone 13 Pro and iPhone 12 mini simulators
 
 ## Test Execution
-
-https://user-images.githubusercontent.com/2563149/144464468-91b044bd-52ee-4cc3-abb8-0301762a9942.mp4
-
-
 Using Gradle from the command line
-
 ````gradle
-./gradlew runIosTestsInParallel
+./gradlew clean test
 ````
 
-Using JUnit in the IDE
+Generating the report
 ````java
-runners/IosTestRunner.java
+allure serve
 ````

@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
         cucumberOptions = @CucumberOptions(
                 features = "src/test/resources/features",
                 glue = "steps",
-                tags = "@ios",
+                tags = {"not @ignore"},
                 plugin = {
                         "pretty",
                         "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",

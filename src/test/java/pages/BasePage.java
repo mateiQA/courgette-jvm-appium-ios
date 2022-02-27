@@ -28,6 +28,7 @@ public class BasePage {
 
     public BasePage() {
         driver = DriverManager.getDriver();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void acceptAlert() {

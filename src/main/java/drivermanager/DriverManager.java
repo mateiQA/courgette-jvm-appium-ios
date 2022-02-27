@@ -57,10 +57,6 @@ public class DriverManager {
     }
 
     public static void quit() {
-        System.out.println("TERMINATEEEEEE");
-        System.out.println("TERMINATEEEEEE");
-        System.out.println("TERMINATEEEEEE");
-        System.out.println("TERMINATEEEEEE");
         if (driver != null) {
             driver.terminateApp("io.appium.TestApp");
             driver.quit();
